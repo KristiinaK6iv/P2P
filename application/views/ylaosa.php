@@ -1,0 +1,42 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->helper('url');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>P2P kuulutused</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
+</head>
+
+
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>P2P kuulutused</h1>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <!--Logo-->
+
+
+        <!--Menu Items-->
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

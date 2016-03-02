@@ -19,8 +19,33 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{	$this->load->view('bar/ylaosa');
+	{	
 		$this->load->view('welcome_message');
-		$this->load->view('bar/alaosa');
+		
 	}
+	
+	public function kuulutused()
+	{	
+		$this->load->view('kuulutused');
+		
+	}
+	
+	public function KKK()
+	{	
+		$this->load->view('KKK');
+		
+	}
+	
+	public function minuKuulutused()
+	{	
+		$this->load->view('minuKuulutused');
+		
+	}
+	public function kontakt()
+	{	
+		$this->load->view('kontakt');
+		
+	}
+	
+
 }

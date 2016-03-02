@@ -1,3 +1,6 @@
+<?php
+include('ylaosa.php')
+?>
 	<div class="container">
 		<section>
 			<div class="page-header" id="avaleht">
@@ -34,3 +37,6 @@
 		</section>
 		
 	</div>
+<?php
+include('alaosa.php')
+?>
