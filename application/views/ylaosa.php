@@ -10,7 +10,7 @@ $this->load->helper('url');
     <meta charset="utf-8"/>
     <title>P2P kuulutused</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme.css"  type="text/css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
 </head>
 
 
@@ -32,10 +32,8 @@ $this->load->helper('url');
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
-                <li><div class="social-wrap a">
-  <button id="facebook">Sisene Facebookiga</button></div></li>  
-              <li><div class="social-wrap a">
-                <button id="idkaart">Sisene ID-kaardiga</div></button></div</li>
+                <li><div class="social-wrap a"><button id="facebook">Sisene Facebookiga</button></div></li>
+                <li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
 
             </ul>
         </div>
