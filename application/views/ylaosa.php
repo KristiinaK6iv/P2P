@@ -15,12 +15,6 @@ $this->load->helper('url');
 
 <body>
 
-<div class="jumbotron">
-    <div class="container">
-        <h1>P2P kuulutused</h1>
-    </div>
-
-</div>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -30,12 +24,18 @@ $this->load->helper('url');
 
         <!--Menu Items-->
         <div>
+            <a class="navbar-brand">P2Pkuulutused</a>
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
+                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
+                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
+                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
+                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
+                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
+                <li><div class="social-wrap a">
+  <button id="facebook">Sisene Facebookiga</button></div></li>  
+              <li><div class="social-wrap a">
+                <button id="idkaart">Sisene ID-kaardiga</div></button></div</li>
+
             </ul>
         </div>
     </div>
