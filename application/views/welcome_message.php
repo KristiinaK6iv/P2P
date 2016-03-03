@@ -11,8 +11,8 @@ include('ylaosa.php')
 				<div class="col-lg-4">
 					<blockquote>
 						<ul>
-							<li><a href="#">IT-teenused</a></li>
-							<li><a href="#">Finantsteenused</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>IT-teenused</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Finantsteenused</a></li>
 						</ul>
 						
 					</blockquote>
@@ -20,16 +20,16 @@ include('ylaosa.php')
 				<div class="col-lg-4">
 					<blockquote>
 						<ul>
-							<li><a href="#">Õpetamine</a></li>
-							<li><a href="#">Iluteenused</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Õpetamine</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Iluteenused</a></li>
 						</ul>
 					</blockquote>
 				</div>
 				<div class="col-lg-4">
 					<blockquote>
 						<ul>
-							<li><a href="#">Puhastusteenused</a></li>
-							<li><a href="#">Varia</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Puhastusteenused</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Varia</a></li>
 						</ul>
 					</blockquote>
 				</div>

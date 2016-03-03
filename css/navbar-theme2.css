@@ -54,3 +54,7 @@ div.social-wrap button {
 .all{
     margin-right:3px;
 }
+
+li {
+    display: block;
+}
