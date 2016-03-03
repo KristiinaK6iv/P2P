@@ -1,10 +1,10 @@
 button#facebook {
     border-color: #2d5073;
     background-color: #3b5998;
-    background-image: url('../../images/facebook-icon.png');
+    background-image: url('../images/facebook-icon.png');
 }
 button#idkaart{
-    background-image: url('../../images/id-icon.png');
+    background-image: url('../images/id-icon.png');
     color:black;
     border-color:blue;
     background-color:white;
