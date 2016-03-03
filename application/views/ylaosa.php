@@ -10,6 +10,7 @@ $this->load->helper('url');
     <meta charset="utf-8"/>
     <title>P2P kuulutused</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme.css"  type="text/css" />
 </head>
 
 
