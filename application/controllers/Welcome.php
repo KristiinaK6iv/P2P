@@ -18,34 +18,64 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
 	public function index()
-	{	
+	{
+			
 		$this->load->view('welcome_message');
 		
 	}
 	
 	public function kuulutused()
-	{	
-		$this->load->view('kuulutused');
+	{
+		
+		$this->load->model('databaseAds');
+		$data['records']=$this->databaseAds->getData();
+		$data['records2']=$this->databaseAds->getSum();
+		
+		$this->load->view('kuulutused',$data);
 		
 	}
 	
 	public function KKK()
-	{	
+	{
+			
 		$this->load->view('KKK');
 		
 	}
 	
 	public function minuKuulutused()
-	{	
+	{
+			
 		$this->load->view('minuKuulutused');
 		
 	}
+	
 	public function kontakt()
-	{	
+	{
+		
 		$this->load->view('kontakt');
 		
 	}
-	
+
+	public function send_data()
+	{
+		
+		$this->load->model('insert_model');
+		$this->insert_model->saveData();
+		
+	}
+
+	public function loadCategory()
+	{
+		
+		$this->load->model('databaseAds');
+		$data['records']=$this->databaseAds->getData();
+		$data['records2']=$this->databaseAds->getSum();
+		$data['records3']=$this->databaseAds->getCategoryData();
+		
+		$this->load->view('kuulutused2',$data);
+		
+	}
 
 }

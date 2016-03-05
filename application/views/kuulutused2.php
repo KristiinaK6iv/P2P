@@ -2,7 +2,34 @@
 include('ylaosa.php')
 ?>
 	<div class="container">
-		<h2>Lisatud kuulutused: </h2>
+		<h2>Otsingu tulemused: </h2>
+			<div class="table-responsive">
+				<table class="table">
+					<tr>
+						<th>Nimi</th>
+						<th>Telefon</th>
+						<th>E-mail</th>
+						<th>Kategooria</th>
+						<th>Kirjeldus</th>
+						<th>Alguskuupäev</th>
+						<th>Lõppkuupäev</th>
+					</tr>
+					<?php foreach($records3 as $rec) : ?>
+					<tr>
+						<td><?php echo $rec->full_name;?></td>
+						<td><?php echo $rec->phone_nr;?></td>
+						<td><?php echo $rec->e_mail;?></td>
+						<td><?php echo $rec->category;?></td>
+						<td><?php echo $rec->description;?></td>
+						<td><?php echo $rec->begin;?></td>
+						<td><?php echo $rec->end;?></td>
+					</tr>
+					<?php endforeach ?>
+	
+				</table>
+			</div>
+			<br>
+		<h2>Kõik kuulutused: </h2>
 			<div class="table-responsive">
 				<table class="table">
 					<tr>
@@ -25,6 +52,7 @@ include('ylaosa.php')
 						<td><?php echo $rec->end;?></td>
 					</tr>
 					<?php endforeach ?>
+	
 				</table>
 			</div>
 			<br>
@@ -42,7 +70,7 @@ include('ylaosa.php')
 					</tr>
 					<?php endforeach ?>
 				</table>
-			</div>
+			</div>	
 	</div>
 <?php
 include('alaosa.php')
