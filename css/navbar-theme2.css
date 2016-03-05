@@ -69,6 +69,10 @@ div.social-wrap button {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
+#KKK h4{
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+}
 li.vastus{
     padding-bottom: 15px;
 }
