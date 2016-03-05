@@ -23,13 +23,10 @@ $this->load->helper('url');
 <nav class="navbar navbar-default">
     <div class="container-fluid">
 
-        <!--Logo-->
-
-
         <!--Menu Items-->
         <div>
-            <a class="navbar-brand">P2Pkuulutused</a>
             <ul class="nav navbar-nav">
+            	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
@@ -37,7 +34,6 @@ $this->load->helper('url');
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
                 <li><div class="social-wrap a"><button id="facebook" onclick="trial()">Sisene Facebookiga</button></div></li>
                 <li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
-
             </ul>
         </div>
     </div>
