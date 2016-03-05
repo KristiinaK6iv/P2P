@@ -1,6 +1,6 @@
 <?php
 
-class databaseAds extends CI_Model{
+class Databaseads extends CI_Model{
 	
 	
 	//To show all the ad's that are in db.

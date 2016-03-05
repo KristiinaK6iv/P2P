@@ -1,6 +1,6 @@
 <?php
 
-class insert_model extends CI_Model{
+class Insert_model extends CI_Model{
 	
 	public function saveData(){
 		

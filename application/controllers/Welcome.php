@@ -29,9 +29,9 @@ class Welcome extends CI_Controller {
 	public function kuulutused()
 	{
 		
-		$this->load->model('databaseAds');
-		$data['records']=$this->databaseAds->getData();
-		$data['records2']=$this->databaseAds->getSum();
+		$this->load->model('Databaseads');
+		$data['records']=$this->Databaseads->getData();
+		$data['records2']=$this->Databaseads->getSum();
 		
 		$this->load->view('kuulutused',$data);
 		
@@ -61,18 +61,18 @@ class Welcome extends CI_Controller {
 	public function send_data()
 	{
 		
-		$this->load->model('insert_model');
-		$this->insert_model->saveData();
+		$this->load->model('Insert_model');
+		$this->Insert_model->saveData();
 		
 	}
 
 	public function loadCategory()
 	{
 		
-		$this->load->model('databaseAds');
-		$data['records']=$this->databaseAds->getData();
-		$data['records2']=$this->databaseAds->getSum();
-		$data['records3']=$this->databaseAds->getCategoryData();
+		$this->load->model('Databaseads');
+		$data['records']=$this->Databaseads->getData();
+		$data['records2']=$this->Databaseads->getSum();
+		$data['records3']=$this->Databaseads->getCategoryData();
 		
 		$this->load->view('kuulutused2',$data);
 		
