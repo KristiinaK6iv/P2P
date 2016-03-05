@@ -18,7 +18,7 @@ include('ylaosa.php')
 		
 		<div class="col-lg-12 well">
 			<div class="row">
-				<form>
+				
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-3 form-group">
@@ -58,9 +58,10 @@ include('ylaosa.php')
 								?>
 							</div>
 							<div class="col-sm-3 form-group">
+								<label>Kategooria: </label>
 								<?php 
 									//Ad category
-									echo form_label("Kategooria :","category");
+									
 									$data=array(
 										"IT-teenused" =>"IT-teenused",
 										"Finantsteenused"=>"Finantsteenused",
@@ -69,34 +70,33 @@ include('ylaosa.php')
 										"Puhastusteenused"=>"Puhastusteenused",
 										"Varia"=>"Varia"
 									);
-									echo form_dropdown('category',$data,'1');
+									echo form_dropdown('category',$data,'IT-teenused');
 								?>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-3 form-group">
 								<?php echo form_label("Alguskuupäev :","begin");?>
-								<input type="date" name="begin" id="begin" value="<?php echo date("d/m/Y"); ?>">
+								<input type="date" name="begin" id="begin" value="<?php echo date("Y-m-d"); ?>">
+								
 							</div>
 							<div class="col-sm-3 form-group">
 								<?php echo form_label("Lõppkuupäev :","end");?>
-								<input type="date" name="end" id="end" value="<?php echo date("d/m/Y"); ?>">
+								<input type="date" name="end" id="end" value="<?php echo date("Y-m-d"); ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label>Kirjeldus</label>
-							<textarea type="input" name="description" id="description" placeholder="Sisesta siia kirjeldus..." rows="5" 
+							<textarea name="description" id="description" placeholder="Sisesta siia kirjeldus..." rows="5" 
 							class="form-control"></textarea>
 						</div>
-					</div>
-				</form>	
+					</div>	
+			</div>
 		</div>
-		
-		<?php echo form_submit("Submit","Salvesta");?>
+        <?php echo form_submit("Submit","Salvesta");?>
 		<?php echo form_close();?>
-
-		</div>
 	</div>
+	
 <?php
 include('alaosa.php')
 ?>
