@@ -54,7 +54,37 @@ div.social-wrap button {
 .all{
     margin-right:3px;
 }
-
-li {
+#avaleht li {
     display: block;
 }
+
+/* logo stiil kontankti lehel*/
+#logo{
+    padding-top: 15px;
+}
+
+/* load more stiil nupp KKK lehel */
+#KKK li{
+    display: none;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+li.vastus{
+    padding-bottom: 15px;
+}
+
+#loadMore {
+    color: green;
+    cursor: pointer;
+}
+#loadMore:hover {
+    color: black;
+}
+#showLess {
+    color: red;
+    cursor: pointer;
+}
+#showLess:hover {
+    color: black;
+}
+
