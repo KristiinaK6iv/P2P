@@ -24,7 +24,7 @@ include('ylaosa.php')
 							<div class="col-sm-3 form-group">
 								<?php 
 									//Name field
-									echo form_label("Full Name :","fullName");
+									echo form_label("Nimi: ","fullName");
 									$data=array(
 										"name"=>"fullName",
 										"id"=>"fullName",
@@ -58,35 +58,30 @@ include('ylaosa.php')
 								?>
 							</div>
 							<div class="col-sm-3 form-group">
-								<label>Kategooria: </label>
-								<?php 
-									//Ad category
-									
-									$data=array(
-										"IT-teenused" =>"IT-teenused",
-										"Finantsteenused"=>"Finantsteenused",
-										"Õpetamine"=>"Õpetamine",
-										"Iluteenused"=> "Iluteenused",
-										"Puhastusteenused"=>"Puhastusteenused",
-										"Varia"=>"Varia"
-									);
-									echo form_dropdown('category',$data,'IT-teenused');
-								?>
+								<label for="category">Kategooria: </label>
+								<select name="category" id="category">
+									<option value="IT-teenused">IT-teenused</option>
+									<option value="Finantsteenused">Finantsteenused</option>
+									<option value="Õpetamine">Õpetamine</option>
+									<option value="Iluteenused">Iluteenused</option>
+									<option value="Puhastusteenused">Puhastusteenused</option>
+									<option value="Varia">Varia</option>
+								</select>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-3 form-group">
-								<?php echo form_label("Alguskuupäev :","begin");?>
-								<input type="date" name="begin" id="begin" value="<?php echo date("Y-m-d"); ?>">
+								<label for="begin">Algus: </label>
+								<input type="date" name="begin" id="begin" value="<?php date("Y-m-d")?>">
 								
 							</div>
 							<div class="col-sm-3 form-group">
-								<?php echo form_label("Lõppkuupäev :","end");?>
-								<input type="date" name="end" id="end" value="<?php echo date("Y-m-d"); ?>">
+								<label for="end">Lõpp: </label>
+								<input type="date" name="end" id="end" value="<?php date("Y-m-d")?>">
 							</div>
 						</div>
 						<div class="form-group">
-							<label>Kirjeldus</label>
+							<label for="description">Kirjeldus: </label>
 							<textarea name="description" id="description" placeholder="Sisesta siia kirjeldus..." rows="5" 
 							class="form-control"></textarea>
 						</div>
