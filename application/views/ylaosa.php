@@ -33,9 +33,12 @@ $this->load->helper('url');
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
-                <li><div class="social-wrap a"><button id="facebook" onclick="trial()">Sisene Facebookiga</button></div></li>
+                <li><fb:login-button autologoutlink="true" data-onlogin="afterLoginCallback()" login_text="Logi sisse" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
                 <li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
             </ul>
         </div>
+<div > 
+</div>
     </div>
 </nav>
+
