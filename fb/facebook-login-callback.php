@@ -37,8 +37,17 @@ if (isset($accessToken)) {
 
   $_SESSION['name'] = $profile['name'];
   $_SESSION['email'] = $profile['email'];
-  header('location: ../');
-  exit;
+  
+
+// Checking in which page we are
+ if (strpos($_SERVER['HTTP_REFERER'], 'minuKuulutusedLoggedOut') !== false) {
+	 header('Location:http://localhost/P2P/index.php/welcome/minuKuulutused');
+  		exit;
+	}else{
+  	header('Location:'.$_SERVER['HTTP_REFERER']);
+  	exit;
+	}
+  
 } else {
     echo "Unauthorized access!!!";
     exit;

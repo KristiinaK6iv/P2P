@@ -7,6 +7,16 @@ $_SESSION['email']=NULL;
 
 session_destroy();
 
- header('location: index.php');  
+// Checking in which page we are
+if (strpos($_SERVER['HTTP_REFERER'], 'minuKuulutused') !== false) {
+	 header('Location:http://localhost/P2P/index.php/welcome/minuKuulutusedLoggedOut');
+  		exit;
+}else{
+  header('Location:'.$_SERVER['HTTP_REFERER']);
+  exit;
+}
+
+ 
+ 
 
 ?>

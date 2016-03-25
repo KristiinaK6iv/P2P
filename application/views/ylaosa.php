@@ -37,6 +37,7 @@ $this->load->helper('url');
             	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
+                
                 <li class="all"> <?php if (isset($_SESSION['name'])){
 						echo " <a href='". base_url() . "index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
 					}else{
