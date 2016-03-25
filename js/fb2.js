@@ -1,39 +1,53 @@
-function statusChangeCallback(response) {
-    if (response.status === 'connected') {
+window.fbAsyncInit = function() {
+	FB.init({
+	appId      : '',
+	cookie     : true,  // enable cookies to allow the server to access 
+	                    // the session
+	status  : true,
+	xfbml      : true,  // parse social plugins on this page
+	version    : 'v2.5' // use any version
+});
+	
+};
+function login() {
+  FB.login(function (response) {
+    if (response.authResponse) {
     	
-    } else if (response.status === 'not_authorized') {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+    window.location.replace('http://localhost/P2P/fb/facebook-login-callback.php');	
+     
+      
     } else {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+      alert("Sisselogimine katkestatud!");
     }
-  }
+  }, { scope: 'public_profile, email' });
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+}
 
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '{}',
-    xfbml      : true,  
-    version    : 'v2.5' 
-  });
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-  };
+
+function logout() {
+	FB.init({
+	appId      : '',
+	cookie     : true,  // enable cookies to allow the server to access 
+	                    // the session
+	status  : true,
+	xfbml      : true,  // parse social plugins on this page
+	version    : 'v2.5' // use any version
+});
   
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+        FB.logout(function(response) { 
+        	window.location.replace('http://localhost/P2P/logout.php');	
+        	 });
+    
+}
 
-  
+
+
+// Load the SDK asynchronously
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
