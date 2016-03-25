@@ -16,7 +16,7 @@
                 <th>Kirjeldus</th>
                 <th>Algus</th>
                 <th>Lõpp</th>
-
+				<th>Asukoht</th>
 
             </tr>
             </thead>
@@ -30,6 +30,7 @@
                     <td><?php echo $row->description;?></td>
                     <td><?php echo $row->begin;?></td>
                     <td><?php echo $row->end;?></td>
+                    <td><?php echo $row->location;?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
