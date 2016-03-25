@@ -45,7 +45,7 @@ include('ylaosa.php')
 
         </div>
         <?php else : ?>
-            <h4 class="text-center">valige kategooria</h4>
+            <h4 class="text-center">Valige kategooria</h4>
         <?php endif; ?>
         <br>
         <h3>Kõik kuulutused: </h3>

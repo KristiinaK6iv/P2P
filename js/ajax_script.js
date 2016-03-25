@@ -7,7 +7,7 @@ function load_data_ajax(type, base_url){
             $.address.value(type);
             var container = $('#byCategory');
             if(data){
-                container.html(data);
+                container.html(data).hide().fadeIn();
             }
 
         }
