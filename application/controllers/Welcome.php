@@ -50,6 +50,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('minuKuulutused');
 		
 	}
+	public function minuKuulutusedLoggedOut()
+	{
+			
+		$this->load->view('minuKuulutusedLoggedOut');
+		
+	}
 	
 	public function kontakt()
 	{
@@ -77,5 +83,5 @@ class Welcome extends CI_Controller {
 		$this->load->view('kuulutused2',$data);
 		
 	}
-
+	
 }

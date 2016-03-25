@@ -1,6 +1,9 @@
 <?php
+session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->helper('url');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +16,8 @@ $this->load->helper('url');
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
-    <script src="<?php echo base_url(); ?>js/fb2.js"></script>
+    <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
+   
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> <!--font-->
 </head>
 
@@ -30,15 +34,31 @@ $this->load->helper('url');
             	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
-                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/minuKuulutused">Minu kuulutused</a></li>
+                <li class="all"> <?php if (isset($_SESSION['name'])){
+						echo " <a href='". base_url() . "/index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
+					}else{
+						echo " <a href='". base_url() . "/index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; }?>	
+				</li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
-                <li><fb:login-button autologoutlink="true" data-onlogin="afterLoginCallback()" login_text="Logi sisse" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
-                <li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
+                 
+                <div id="facebook-root"></div>
+                <li><div class="social-wrap a"><button id="facebook" onclick="login();">Sisene fb'ga</button></div></li> 
+				<li><div class="social-wrap a"><button id="facebook" onclick="logout();">Välju</button></div></li> 
+				      
+                
             </ul>
         </div>
 <div > 
 </div>
     </div>
 </nav>
-
+<div>
+	<?php if (isset($_SESSION['name'])){
+		
+				echo "Welcome ",$_SESSION['name']; 
+		
+		
+					}?>
+		
+</div>
