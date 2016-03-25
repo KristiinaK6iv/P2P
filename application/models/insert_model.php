@@ -37,21 +37,22 @@ class Insert_model extends CI_Model{
 		}
 		
 	}
-		//Function to add data to db
+		// Function to add data to db
 		function add($name, $number,$location, $e_mail,$category,$description,$begin,$end){
 		
-		$query="INSERT INTO person(full_name,phone_nr,e_mail) VALUES (?,?,?)";
 		
-		$query2="INSERT INTO kuulutus(category,description,begin,end,location) VALUES (?,?,?,?,?)";
+		// Calling procedure from database
+		$stored_procedure = "CALL add_person(?,?,?)";
+		$this->db->query($stored_procedure,array('full_name'=>$name,'phone_nr'=>$number,'e_mail'=>$e_mail));
 		
-		$args=array($name,$number,$e_mail);
-		$args2=array($category,$description,$begin,$end,$location);
 		
-		if($this->db->query($query,$args)==true && $this->db->query($query2,$args2)==true){
-			return true;
-		}else{
-			return false;
-		}
+		// Calling procedure from database
+		$stored_procedure = "CALL add_ad(?,?,?,?,?)";
+		$this->db->query($stored_procedure,array('category'=>$category,'description'=>$description,'begin'=>$begin,'end'=>$end,'location'=>$location));
+		
+		
+		
+		
 	}
 }
 

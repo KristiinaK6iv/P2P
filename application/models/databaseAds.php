@@ -7,16 +7,9 @@ class Databaseads extends CI_Model{
 	public function getData(){
 
 
-		$query2="
-		SELECT person.person_id, person.full_name, 
-		person.phone_nr, person.e_mail, kuulutus.person_id,
-		kuulutus.category, kuulutus.description, kuulutus.begin, 
-		kuulutus.end from person 
-		INNER JOIN kuulutus ON
-		person.person_id=kuulutus.person_id
-		";
-
-		$query=$this->db->query($query2);
+		
+	 	$query = $this->db->get('v_all_data');
+        
 		return $query->result();
 	}
 
@@ -24,50 +17,56 @@ class Databaseads extends CI_Model{
 	//To see statistic about how many ad's are in different categories.
 	public function getSum(){
 
-		$query2="
-		SELECT category , count(category)as count 
-		from kuulutus group by category
-		";
+		
 
-		$query=$this->db->query($query2);
+		$query=$this->db->get('v_statistics');
 		return $query->result();
 	}
-    //seda ei kasutata ka praegu
-	public function getCategoryData()
-	{
-
-		$var = $_GET['selected'];
-
-		$query2 = "
-		SELECT person.person_id, person.full_name,
-		person.phone_nr, person.e_mail, kuulutus.person_id,
-		kuulutus.category, kuulutus.description, kuulutus.begin,
-		kuulutus.end from person
-		INNER JOIN kuulutus ON
-		person.person_id=kuulutus.person_id
-        WHERE kuulutus.category='" . $var . "'";
-
-		$query = $this->db->query($query2);
-		return $query->result();
-	}
+	
 
 	//sellega andmebaasi päring ajax scripti jaoks
 	public function getCategoryAjax(){
+		
 		$type = $this->input->post('type');
+		
 		if ($type == "Opetamine"){
 			$type = "Õpetamine";
+			
+			// Calling view from database
+			$query = $this->db->get('v_opetamine');
+			return $query->result();
 		}
-		$query2 = "
-		SELECT person.person_id, person.full_name,
-		person.phone_nr, person.e_mail, kuulutus.person_id,
-		kuulutus.category, kuulutus.description, kuulutus.begin,
-		kuulutus.end from person
-		INNER JOIN kuulutus ON
-		person.person_id=kuulutus.person_id
-        WHERE kuulutus.category='" . $type . "'";
-
-		$query = $this->db->query($query2);
-		return $query->result();
+		elseif ($type == "IT-teenused") {
+			
+			// Calling view from database
+			$query = $this->db->get('v_it_teenused');
+  			return $query->result();
+		}
+		elseif($type == "Iluteenused"){
+			
+			// Calling view from database
+			$query = $this->db->get('v_iluteenused');
+  			return $query->result();
+		}
+		elseif($type == "Finantsteenused"){
+			
+			// Calling view from database
+			$query = $this->db->get('v_finantsteenused');
+  			return $query->result();
+		}
+		elseif($type == "Varia"){
+			
+			// Calling view from database
+			$query = $this->db->get('v_varia');
+  			return $query->result();
+		}
+		else{
+			
+			// Calling view from database
+			$query = $this->db->get('v_puhastusteenused');
+  			return $query->result();
+		}
+		
 	}
 }
 

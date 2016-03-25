@@ -24,6 +24,7 @@ include('ylaosa.php')
 					<th>Kirjeldus</th>
 					<th>Alguskuupäev</th>
 					<th>Lõppkuupäev</th>
+					<th>Asukoht</th>
 				</tr>
 				<?php foreach($records as $rec) : ?>
 					<tr>
@@ -34,6 +35,7 @@ include('ylaosa.php')
 						<td><?php echo $rec->description;?></td>
 						<td><?php echo $rec->begin;?></td>
 						<td><?php echo $rec->end;?></td>
+						<td><?php echo $rec->location;?></td>
 					</tr>
 				<?php endforeach ?>
 			</table>

@@ -55,12 +55,9 @@ $this->load->helper('url');
 </div>
     </div>
 </nav>
-<div>
+<div class="container">
 	<?php if (isset($_SESSION['name'])){
-		
-				echo "Welcome ",$_SESSION['name'],$_SESSION['email']; 
-		
-		
-					}?>
+			echo "Welcome ",$_SESSION['name']," !"; 
+		}?>
 		
 </div>
