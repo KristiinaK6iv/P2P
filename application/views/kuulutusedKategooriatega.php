@@ -12,7 +12,7 @@ include('ylaosa.php')
             <div class="col-md-4"><button id="Puhastusteenused" type="button" class="btn btn-block categoryButton">Puhastusteenused</button></div>
             <div class="col-md-4"><button id="Varia" type="button" class="btn btn-block categoryButton">Varia</button></div>
         </div>
-
+        <p id="poleJs">Juhul, kui Te ei näe soovitud kategooriat, vajutage <a href="<?php echo base_url(); ?>index.php/categories/loadCategoryPage/">siia</a> ja valige kategooria uuesti.</p>
         <div id="byCategory" class="table-responsive">
 
 

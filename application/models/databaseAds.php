@@ -22,7 +22,49 @@ class Databaseads extends CI_Model{
 		$query=$this->db->get('v_statistics');
 		return $query->result();
 	}
-	
+	public function getCategoryData(){
+		$type = $this->uri->segment(3);
+		if ($type == "Opetamine"){
+			$type = "Õpetamine";
+
+			// Calling view from database
+			$query = $this->db->get('v_opetamine');
+			return $query->result();
+		}
+		elseif ($type == "IT-teenused") {
+
+			// Calling view from database
+			$query = $this->db->get('v_it_teenused');
+			return $query->result();
+		}
+		elseif($type == "Iluteenused"){
+
+			// Calling view from database
+			$query = $this->db->get('v_iluteenused');
+			return $query->result();
+		}
+		elseif($type == "Finantsteenused"){
+
+			// Calling view from database
+			$query = $this->db->get('v_finantsteenused');
+			return $query->result();
+		}
+		elseif($type == "Varia"){
+
+			// Calling view from database
+			$query = $this->db->get('v_varia');
+			return $query->result();
+		}
+		elseif($type == "Puhastusteenused"){
+
+			// Calling view from database
+			$query = $this->db->get('v_puhastusteenused');
+			return $query->result();
+		}
+		else{
+			return array();
+		}
+	}
 
 	//sellega andmebaasi päring ajax scripti jaoks
 	public function getCategoryAjax(){

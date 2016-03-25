@@ -103,3 +103,7 @@ h2{
 .categoryButton.btn:hover{
     background-color: #9acfea;
 }
+
+#poleJs{
+    font-size: 12px;
+}

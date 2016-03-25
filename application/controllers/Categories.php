@@ -15,16 +15,16 @@ class Categories extends CI_Controller {
             $data['list'] = $this->Databaseads->getCategoryAjax();
         $this->load->view('category_table', $data);
     }
-    //seda ei kasuta hetkel
+    //seda kasutame juhul, kui js on välja lülitatud
     public function loadCategoryPage()
     {
-        $data['title'] = $_GET['selected'];
+        $data['title'] = $this->uri->segment(3);
         $this->load->model('Databaseads');
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
         $data['records3'] = $this->Databaseads->getCategoryData();
 
-        $this->load->view('kuulutusedKategooriatega', $data);
+        $this->load->view('kategooriadIlmaJs', $data);
     }
     //seda kasutab, et avalehelt kategoorialehele minna, aga kategooriatabeli võtab ajaxiga juurde (teen ümber veel seda)
     public function loadCategory()
@@ -32,7 +32,6 @@ class Categories extends CI_Controller {
         $this->load->model('Databaseads');
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
-
         $this->load->view('kuulutusedKategooriatega', $data);
 
     }
