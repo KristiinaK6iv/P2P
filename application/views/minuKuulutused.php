@@ -21,19 +21,38 @@ include('ylaosa.php')
 				
 					<div class="col-sm-12">
 						<div class="row">
-							<div class="col-sm-3 form-group">
-								<?php 
-									//Name field
-									echo form_label("Nimi: ","fullName");
-									$data=array(
-										"name"=>"fullName",
-										"id"=>"fullName",
-										"value"=>""
-									);
-									echo form_input($data);
-								?>
+							<div class="col-sm-4 form-group">
+								<label for="location">Asukoht: </label>
+								<select name="location" id="location">
+									<option value="Harjumaa">Harjumaa</option>
+									<option value="Hiiumaa">Hiiumaa</option>
+									<option value="Ida-Virumaa">Ida-Virumaa</option>
+									<option value="Jõgevamaa">Jõgevamaa</option>
+									<option value="Järvamaa">Järvamaa</option>
+									<option value="Läänemaa">Läänemaa</option>
+									<option value="Lääne-Virumaa">Lääne-Virumaa</option>
+									<option value="Põlvamaa">Põlvamaa</option>
+									<option value="Pärnumaa">Pärnumaa</option>
+									<option value="Raplamaa">Raplamaa</option>
+									<option value="Saaremaa">Saaremaa</option>
+									<option value="Tartumaa">Tartumaa</option>
+									<option value="Valgamaa">Valgamaa</option>
+									<option value="Viljandimaa">Viljandimaa</option>
+									<option value="Võrumaa">Võrumaa</option>
+								</select>
 							</div>
-							<div class="col-sm-3 form-group">
+							<div class="col-sm-4 form-group">
+								<label for="category">Kategooria: </label>
+								<select name="category" id="category">
+									<option value="IT-teenused">IT-teenused</option>
+									<option value="Finantsteenused">Finantsteenused</option>
+									<option value="Õpetamine">Õpetamine</option>
+									<option value="Iluteenused">Iluteenused</option>
+									<option value="Puhastusteenused">Puhastusteenused</option>
+									<option value="Varia">Varia</option>
+								</select>
+							</div>
+							<div class="col-sm-4 form-group">
 								<?php 
 									//Phone field
 									echo form_label("Telefon :","phone_nr");
@@ -45,37 +64,14 @@ include('ylaosa.php')
 									echo form_input($data);
 								?>
 							</div>
-							<div class="col-sm-3 form-group">
-								<?php 
-									//E-mail
-									echo form_label("E-mail :","e_mail");
-									$data=array(
-										"name"=>"e_mail",
-										"id"=>"e_mail",
-										"value"=>""
-									);
-									echo form_input($data);
-								?>
-							</div>
-							<div class="col-sm-3 form-group">
-								<label for="category">Kategooria: </label>
-								<select name="category" id="category">
-									<option value="IT-teenused">IT-teenused</option>
-									<option value="Finantsteenused">Finantsteenused</option>
-									<option value="Õpetamine">Õpetamine</option>
-									<option value="Iluteenused">Iluteenused</option>
-									<option value="Puhastusteenused">Puhastusteenused</option>
-									<option value="Varia">Varia</option>
-								</select>
-							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-3 form-group">
+							<div class="col-sm-4 form-group">
 								<label for="begin">Algus: </label>
 								<input type="date" name="begin" id="begin" value="<?php date("Y-m-d")?>">
 								
 							</div>
-							<div class="col-sm-3 form-group">
+							<div class="col-sm-4 form-group">
 								<label for="end">Lõpp: </label>
 								<input type="date" name="end" id="end" value="<?php date("Y-m-d")?>">
 							</div>

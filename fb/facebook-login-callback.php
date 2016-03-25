@@ -3,8 +3,8 @@ session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '',
-  'app_secret' => '',
+  'app_id' => '1266078760075547',
+  'app_secret' => 'af3a1d4997c9330ac4cfd93af54b13c7',
   'default_graph_version' => 'v2.5'
 ]);
 
@@ -36,6 +36,7 @@ if (isset($accessToken)) {
   }
 
   $_SESSION['name'] = $profile['name'];
+  $_SESSION['email'] = $profile['email'];
   header('location: ../');
   exit;
 } else {

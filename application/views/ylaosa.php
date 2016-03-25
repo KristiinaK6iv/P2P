@@ -57,9 +57,8 @@ $this->load->helper('url');
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
                  
-                <div id="facebook-root"></div>
-                <li><div class="social-wrap a"><button id="facebook" onclick="login();">Sisene fb'ga</button></div></li> 
-				<li><div class="social-wrap a"><button id="facebook" onclick="logout();">Välju</button></div></li> 
+                <li><div id="facebook-root" class="social-wrap a"><button id="facebook" onclick="login();">Sisene fb'ga</button></div></li> 
+				<li><div id="facebook-root" class="social-wrap a"><button id="facebook" onclick="logout();">Välju</button></div></li> 
 				      
                 
             </ul>
@@ -71,7 +70,7 @@ $this->load->helper('url');
 <div>
 	<?php if (isset($_SESSION['name'])){
 		
-				echo "Welcome ",$_SESSION['name']; 
+				echo "Welcome ",$_SESSION['name'],$_SESSION['email']; 
 		
 		
 					}?>
