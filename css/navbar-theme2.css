@@ -95,3 +95,11 @@ h3{
 h2{
 	text-align: center;
 }
+.categoryButton.btn{
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+.categoryButton.btn:hover{
+    background-color: #9acfea;
+}

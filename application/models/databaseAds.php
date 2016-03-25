@@ -1,12 +1,12 @@
 <?php
 
 class Databaseads extends CI_Model{
-	
-	
+
+
 	//To show all the ad's that are in db.
 	public function getData(){
-		
-		
+
+
 		$query2="
 		SELECT person.person_id, person.full_name, 
 		person.phone_nr, person.e_mail, kuulutus.person_id,
@@ -15,42 +15,60 @@ class Databaseads extends CI_Model{
 		INNER JOIN kuulutus ON
 		person.person_id=kuulutus.person_id
 		";
-		
+
 		$query=$this->db->query($query2);
 		return $query->result();
 	}
-	
-	
+
+
 	//To see statistic about how many ad's are in different categories.
 	public function getSum(){
-		
+
 		$query2="
 		SELECT category , count(category)as count 
 		from kuulutus group by category
 		";
-		
+
 		$query=$this->db->query($query2);
 		return $query->result();
 	}
-	
-	public function getCategoryData(){
-		
-		$var=$_GET['selected'];
-		
-		$query2="
-		SELECT person.person_id, person.full_name, 
+    //seda ei kasutata ka praegu
+	public function getCategoryData()
+	{
+
+		$var = $_GET['selected'];
+
+		$query2 = "
+		SELECT person.person_id, person.full_name,
 		person.phone_nr, person.e_mail, kuulutus.person_id,
-		kuulutus.category, kuulutus.description, kuulutus.begin, 
-		kuulutus.end from person 
+		kuulutus.category, kuulutus.description, kuulutus.begin,
+		kuulutus.end from person
 		INNER JOIN kuulutus ON
 		person.person_id=kuulutus.person_id
         WHERE kuulutus.category='" . $var . "'";
-		
-		$query=$this->db->query($query2);
+
+		$query = $this->db->query($query2);
 		return $query->result();
 	}
-	
-	
+
+	//sellega andmebaasi päring ajax scripti jaoks
+	public function getCategoryAjax(){
+		$type = $this->input->post('type');
+		if ($type == "Opetamine"){
+			$type = "Õpetamine";
+		}
+		$query2 = "
+		SELECT person.person_id, person.full_name,
+		person.phone_nr, person.e_mail, kuulutus.person_id,
+		kuulutus.category, kuulutus.description, kuulutus.begin,
+		kuulutus.end from person
+		INNER JOIN kuulutus ON
+		person.person_id=kuulutus.person_id
+        WHERE kuulutus.category='" . $type . "'";
+
+		$query = $this->db->query($query2);
+		return $query->result();
+	}
 }
 
 

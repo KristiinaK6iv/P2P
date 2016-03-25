@@ -15,9 +15,24 @@ $this->load->helper('url');
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.address-1.5.js"></script>
+    <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
     <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
     <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
-   
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.address.change(function(event) {
+                console.log("laeb tabeli " + event.value.split("/")[1]);
+                load_data_ajax(event.value.split("/")[1], "<?php echo base_url(); ?>"+"index.php");
+            });
+
+            $(".categoryButton").click(function() {
+                $.address.value($(this).attr('id'));
+            });
+
+        });
+    </script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> <!--font-->
 </head>
 
@@ -35,9 +50,9 @@ $this->load->helper('url');
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/index">Avaleht</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kuulutused">Kuulutused</a></li>
                 <li class="all"> <?php if (isset($_SESSION['name'])){
-						echo " <a href='". base_url() . "/index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
+						echo " <a href='". base_url() . "index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
 					}else{
-						echo " <a href='". base_url() . "/index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; }?>	
+						echo " <a href='". base_url() . "index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; }?>
 				</li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
