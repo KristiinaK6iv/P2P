@@ -26,14 +26,7 @@ function login() {
 
 
 function logout() {
-	FB.init({
-	appId      : '',
-	cookie     : true,  // enable cookies to allow the server to access 
-	                    // the session
-	status  : true,
-	xfbml      : true,  // parse social plugins on this page
-	version    : 'v2.5' // use any version
-});
+	
   
         FB.logout(function(response) { 
         	window.location.replace('http://localhost/P2P/logout.php');	

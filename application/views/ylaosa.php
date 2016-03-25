@@ -42,11 +42,16 @@ $this->load->helper('url');
 					}else{
 						echo " <a href='". base_url() . "index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; }?>
 				</li>
+				
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
                 <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
                  
-                <li><div id="facebook-root" class="social-wrap a"><button id="facebook" onclick="login();">Sisene fb'ga</button></div></li> 
-				<li><div id="facebook-root" class="social-wrap a"><button id="facebook" onclick="logout();">Välju</button></div></li> 
+                <li><?php if (isset($_SESSION['name'])){
+                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"logout();\">Välju</button></div>";
+                	}else{
+                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"login();\">Sisene Facebookiga</button></div>"; }?>
+                </li> 
+				<li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
 				      
                 
             </ul>
