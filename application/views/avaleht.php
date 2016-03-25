@@ -3,37 +3,26 @@ include('ylaosa.php')
 ?>
 	<div class="container">
 		<section>
-			<div class="page-header" id="avaleht">
+			<div class="page-header">
 				<h2> Kuulutused </h2>
 			</div>
+				<div class="row">
+					<div class="col-md-4"><button id="IT-teenused" type="button" class="btn btn-block categoryButton">IT-teenused</button></div>
+					<div class="col-md-4"><button id="Finantsteenused" type="button" class="btn btn-block categoryButton">Finantsteenused</button></div>
+					<div class="col-md-4"><button id="Opetamine" type="button" class="btn btn-block categoryButton">Õpetamine</button></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"><button id="Iluteenused" type="button" class="btn btn-block categoryButton">Iluteenused</button></div>
+					<div class="col-md-4"><button id="Puhastusteenused" type="button" class="btn btn-block categoryButton">Puhastusteenused</button></div>
+					<div class="col-md-4"><button id="Varia" type="button" class="btn btn-block categoryButton">Varia</button></div>
+				</div>
+				<div id="byCategory" class="table-responsive">
+					<p class ="text-center" id="poleJs">Juhul, kui Te ei näe soovitud kategooriat, vajutage <a href="<?php echo base_url(); ?>index.php/categories/categoryPage/">siia</a>
+						ja valige kategooria uuesti.</p>
+					<br>
+					<br>
 
-			<div class="row">
-				<div class="col-lg-4">
-					<blockquote>
-						<ul>
-							<li><a id="IT-teenused" href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/IT-teenused"><span class="glyphicon glyphicon-chevron-right"></span>IT-teenused</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/Finantsteenused"><span class="glyphicon glyphicon-chevron-right"></span>Finantsteenused</a></li>
-						</ul>
-
-					</blockquote>
 				</div>
-				<div class="col-lg-4">
-					<blockquote>
-						<ul>
-							<li><a href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/Opetamine"><span class="glyphicon glyphicon-chevron-right"></span>Õpetamine</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/Iluteenused"><span class="glyphicon glyphicon-chevron-right"></span>Iluteenused</a></li>
-						</ul>
-					</blockquote>
-				</div>
-				<div class="col-lg-4">
-					<blockquote>
-						<ul>
-							<li><a href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/Puhastusteenused"><span class="glyphicon glyphicon-chevron-right"></span>Puhastusteenused</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/categories/loadCategory/#/Varia"><span class="glyphicon glyphicon-chevron-right"></span>Varia</a></li>
-						</ul>
-					</blockquote>
-				</div>
-			</div>
 		</section>
 		
 	</div>

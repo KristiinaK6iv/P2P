@@ -6,6 +6,13 @@ class Categories extends CI_Controller {
         $this->load->helper('url');
     }
 
+    public function index()
+    {
+
+        $this->load->view('avaleht');
+
+    }
+
     //sellega ajaxi script uuendab kategooriatabelit
     function get_new_category(){
         $title = $this->input->post('type');
@@ -16,23 +23,21 @@ class Categories extends CI_Controller {
         $this->load->view('category_table', $data);
     }
     //seda kasutame juhul, kui js on välja lülitatud
-    public function loadCategoryPage()
+    public function categoryPage()
     {
         $data['title'] = $this->uri->segment(3);
         $this->load->model('Databaseads');
-        $data['records'] = $this->Databaseads->getData();
-        $data['records2'] = $this->Databaseads->getSum();
         $data['records3'] = $this->Databaseads->getCategoryData();
 
         $this->load->view('kategooriadIlmaJs', $data);
     }
-    //seda kasutab, et avalehelt kategoorialehele minna, aga kategooriatabeli võtab ajaxiga juurde (teen ümber veel seda)
-    public function loadCategory()
+    //seda kasutab, et kõiki kuulutusi laadida Kõigi kuulutuste lehel
+    public function all()
     {
         $this->load->model('Databaseads');
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
-        $this->load->view('kuulutusedKategooriatega', $data);
+        $this->load->view('koikKuulutused', $data);
 
     }
 
