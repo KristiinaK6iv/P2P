@@ -36,6 +36,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('kuulutused',$data);
 		
 	}
+	public function minuKuulutused()
+	{
+		
+		$this->load->view('minuKuulutused');
+		
+	}
 	
 	public function KKK()
 	{
@@ -44,12 +50,7 @@ class Welcome extends CI_Controller {
 		
 	}
 	
-	public function minuKuulutused()
-	{
-			
-		$this->load->view('minuKuulutused');
-		
-	}
+	
 	public function minuKuulutusedLoggedOut()
 	{
 			
@@ -83,5 +84,24 @@ class Welcome extends CI_Controller {
 		$this->load->view('kuulutused2',$data);
 		
 	}
+	public function reklaam()
+	{
+		
+		$this->load->view('reklaam');
+		
+	}
+	public function recieve()
+	{
+		
+		$this->load->view('recieve');
+		
+	}
+	public function notrecieved()
+	{
+		
+		$this->load->view('notrecieved');
+		
+	}
+	
 	
 }

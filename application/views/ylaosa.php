@@ -26,44 +26,40 @@ $this->load->helper('url');
 
 
 <body>
-
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-
-        <!--Menu Items-->
-        <div>
-            <ul class="nav navbar-nav">
-            	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
-                <li class="all"><a href="<?php echo base_url(); ?>index.php/categories/">Avaleht</a></li>
-                <li class="all"><a href="<?php echo base_url(); ?>index.php/categories/all/">Kõik kuulutused</a></li>
-                
-                <li class="all"> <?php if (isset($_SESSION['name'])){
-						echo " <a href='". base_url() . "index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
-					}else{
-						echo " <a href='". base_url() . "index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; }?>
-				</li>
-				
-                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
-                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
-                 
-                <li><?php if (isset($_SESSION['name'])){
-                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"logout();\">Välju</button></div>";
-                	}else{
-                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"login();\">Sisene Facebookiga</button></div>"; }?>
-                </li> 
-				<li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
-				      
-                
-            </ul>
-        </div>
-<div > 
-</div>
-    </div>
-</nav>
-<div class="container">
-	<?php if (isset($_SESSION['name'])){
-			echo "Welcome ",$_SESSION['name']," !"; 
+	<nav class="navbar navbar-default">
+	    <div class="container-fluid">
+	
+	        <!--Menu Items-->
+	        <div>
+	            <ul class="nav navbar-nav">
+	            	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
+	                <li class="all"><a href="<?php echo base_url(); ?>index.php/categories/">Avaleht</a></li>
+	                <li class="all"><a href="<?php echo base_url(); ?>index.php/categories/all/">Kõik kuulutused</a></li>
+	                <li class="all"> 
+	                		<?php if (isset($_SESSION['name'])){
+								echo " <a href='". base_url() . "index.php/welcome/minuKuulutused'>Minu kuulutused</a>";
+								}else{
+								echo " <a href='". base_url() . "index.php/welcome/minuKuulutusedLoggedOut'>Minu kuulutused</a>"; 
+							}?>
+					</li>				
+	                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/KKK">KKK</a></li>
+	                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/reklaam">Reklaam</a></li>
+	                <li class="all"><a href="<?php echo base_url(); ?>index.php/welcome/kontakt">Kontakt</a></li>
+	                <li> 
+	                	<?php if (isset($_SESSION['name'])){
+		                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"logout();\">Välju</button></div>";
+		                	}else{
+		                	echo "<div id=\"facebook-root\" class='social-wrap a'><button id='facebook' onclick=\"login();\">Sisene Facebookiga</button></div>"; 
+						}?>
+	                </li> 
+					<li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+	
+	<div class="container">
+		<?php if (isset($_SESSION['name'])){
+				echo "Welcome ",$_SESSION['name']," !"; 
 		}?>
-		
-</div>
+	</div>
