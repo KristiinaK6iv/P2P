@@ -58,6 +58,7 @@ class Categories extends CI_Controller {
         $this->load->model('Databaseads');
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
+		$data['records6']=$this->Databaseads->getCityStatistic();
         $this->load->view('koikKuulutused', $data);
 
     }
@@ -66,6 +67,7 @@ class Categories extends CI_Controller {
         $this->load->model('Databaseads');
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
+		$data['records6']=$this->Databaseads->getCityStatistic();
         $this->load->view('en_koikKuulutused', $data);
 	
     }

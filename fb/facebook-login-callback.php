@@ -3,8 +3,8 @@ session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '1266078760075547',
-  'app_secret' => 'af3a1d4997c9330ac4cfd93af54b13c7',
+  'app_id' => '',
+  'app_secret' => '',
   'default_graph_version' => 'v2.5'
 ]);
 

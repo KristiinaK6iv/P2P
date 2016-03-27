@@ -144,7 +144,15 @@ ul.sitemap li#minu a {
 h3#sisu{
     font-family: 'Open Sans', sans-serif;
 }
-
+.notseen{
+	display: none;
+}
+.mapid{
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+	height:600px;
+}
 
 
 

@@ -25,6 +25,8 @@ $this->load->helper('url');
     <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> <!--font-->
+     <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
 </head>
 
 

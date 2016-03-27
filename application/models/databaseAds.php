@@ -22,6 +22,12 @@ class Databaseads extends CI_Model{
 		$query=$this->db->get('v_statistics');
 		return $query->result();
 	}
+	//To see statistic about how many ad's are in different cities.
+	public function getCityStatistic(){
+
+		$query=$this->db->get('v_city');
+		return $query->result();
+	}
 	public function getCategoryData(){
 		$type = $this->uri->segment(3);
 		if ($type == "Opetamine"){
