@@ -9,7 +9,7 @@ $this->load->helper('url');
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<head>
     
     <title>P2P kuulutused</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
@@ -61,11 +61,12 @@ $this->load->helper('url');
 					
 					<li><div class='btn-group'> <!-- Change language -->
                   <a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
-			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></li>
+			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></div></li>
+</ul>
 </div>
 					
 					
-	            </ul>
+	           
 	        </div>
 	    </div>
 	</nav>
