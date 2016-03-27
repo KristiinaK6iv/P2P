@@ -136,6 +136,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('en_minuKuulutusedLoggedout');	
 	}
+	public function enAlaosa()
+	{
+		$this->load->view('en_alaosa');
+	}
+	public function enSisukaart()
+	{
+		$this->load->view('en_sitemap');
+	}
 	
 	
 }

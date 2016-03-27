@@ -36,7 +36,7 @@ $this->load->helper('url');
 	        <div>
 	            <ul class="nav navbar-nav">
 	            	<li><a href="" class="navbar-brand">P2Pkuulutused</a></li>
-	                <li  class="all"><a href="<?php echo base_url(); ?>index.php/welcome/enAvaleht">Home</a></li>
+	                <li  class="all"><a href="<?php echo base_url(); ?>index.php/categories/en/">Home</a></li>
 	                <li  class="all"><a href="<?php echo base_url(); ?>index.php/categories/allEn/">Ads</a></li>
 	                <li   class="all"> 
 	                		<?php if (isset($_SESSION['name'])){
@@ -58,7 +58,7 @@ $this->load->helper('url');
 					<li ><div class="social-wrap a"><button id="idkaart">ID card</button></div></li>
 					
 					<li><div class='btn-group'> <!-- Change language -->
-                  <a href="<?php echo base_url(); ?>index.php/welcome/enAvaleht" class='btn btn-circle btn-warning'>ENG</a>
+                  <a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
 			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></li>
 </div>
 					

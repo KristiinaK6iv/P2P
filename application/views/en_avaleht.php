@@ -17,7 +17,7 @@ include('en_ylaosa.php')
 					<div class="col-md-4"><button id="Varia" type="button" class="btn btn-block categoryButton">Varia</button></div>
 				</div>
 				<div id="byCategory" class="table-responsive">
-					<p class ="text-center" id="poleJs">If you don't see any suitable category click <a href="<?php echo base_url(); ?>index.php/categories/categoryPage/">here</a>
+					<p class ="text-center" id="poleJs">If you don't see any suitable category click <a href="<?php echo base_url(); ?>index.php/categories/enCategoryPage/">here</a>
 						and choose the category again</p>
 					<br>
 					<br>
@@ -27,5 +27,5 @@ include('en_ylaosa.php')
 		
 	</div>
 <?php
-include('alaosa.php')
+include('en_alaosa.php')
 ?>

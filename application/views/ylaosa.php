@@ -55,7 +55,7 @@ $this->load->helper('url');
 	                </li> 
 					<li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
 					<li><div class='btn-group'> <!-- Change language -->
-			<a href="<?php echo base_url(); ?>index.php/welcome/enAvaleht" class='btn btn-circle btn-warning'>ENG</a>
+			<a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
 			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></div></li>
 	            </ul>
 	        </div>

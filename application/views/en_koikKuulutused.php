@@ -49,5 +49,5 @@ include('en_ylaosa.php')
         </div>
     </div>
 <?php
-include('alaosa.php')
+include('en_alaosa.php')
 ?>

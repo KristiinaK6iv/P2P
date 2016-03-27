@@ -10,7 +10,11 @@ class Categories extends CI_Controller {
     {
 
         $this->load->view('avaleht');
+    }
+    public function en()
+    {
 
+        $this->load->view('en_avaleht');
     }
 
     //sellega ajaxi script uuendab kategooriatabelit
@@ -36,6 +40,17 @@ class Categories extends CI_Controller {
         $data['records3'] = $this->Databaseads->getCategoryData();
 
         $this->load->view('kategooriadIlmaJs', $data);
+    }
+    public function enCategoryPage()
+    {   $title = $this->uri->segment(3);
+        if ($title == "Opetamine") {
+            $title = "Õpetamine";
+        }
+        $data['title']  = $title;
+        $this->load->model('Databaseads');
+        $data['records3'] = $this->Databaseads->getCategoryData();
+
+        $this->load->view('en_kategooriadIlmaJs', $data);
     }
     //seda kasutab, et kõiki kuulutusi laadida Kõigi kuulutuste lehel
     public function all()
