@@ -16,6 +16,9 @@ class Categories extends CI_Controller {
     //sellega ajaxi script uuendab kategooriatabelit
     function get_new_category(){
         $title = $this->input->post('type');
+        if ($title == "Opetamine") {
+            $title = "Õpetamine";
+        }
         $this->load->model('Databaseads');
         $data = array();
         $data['title'] = $title;
@@ -24,8 +27,11 @@ class Categories extends CI_Controller {
     }
     //seda kasutame juhul, kui js on välja lülitatud
     public function categoryPage()
-    {
-        $data['title'] = $this->uri->segment(3);
+    {   $title = $this->uri->segment(3);
+        if ($title == "Opetamine") {
+            $title = "Õpetamine";
+        }
+        $data['title']  = $title;
         $this->load->model('Databaseads');
         $data['records3'] = $this->Databaseads->getCategoryData();
 

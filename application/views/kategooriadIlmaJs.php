@@ -53,7 +53,7 @@ include('ylaosa.php')
 
         </div>
         <?php else : ?>
-            <h4 class="text-center">Valige kategooria</h4>
+            <h4 class="text-center">Ei leidnud ühtegi kuulutust.</h4>
         <?php endif; ?>
     </div>
 
