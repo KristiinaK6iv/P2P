@@ -46,5 +46,13 @@ class Categories extends CI_Controller {
         $this->load->view('koikKuulutused', $data);
 
     }
+     public function allEn()
+    {
+        $this->load->model('Databaseads');
+        $data['records'] = $this->Databaseads->getData();
+        $data['records2'] = $this->Databaseads->getSum();
+        $this->load->view('en_koikKuulutused', $data);
+	
+    }
 
 }
