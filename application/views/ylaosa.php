@@ -20,6 +20,7 @@ $this->load->helper('url');
     <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
     <script src="<?php echo base_url(); ?>js/address_listener.js"></script>
     <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
+    <script src="<?php echo base_url(); ?>js/translation.js"></script>
     <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> <!--font-->
 </head>
@@ -53,6 +54,9 @@ $this->load->helper('url');
 						}?>
 	                </li> 
 					<li><div class="social-wrap a"><button id="idkaart">Sisene ID-kaardiga</button></div></li>
+					<li><div class='btn-group'> <!-- Change language -->
+			<a href="<?php echo base_url(); ?>index.php/welcome/enAvaleht" class='btn btn-circle btn-warning'>ENG</a>
+			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></div></li>
 	            </ul>
 	        </div>
 	    </div>
