@@ -68,7 +68,7 @@ $this->load->helper('url');
 					
 	           
 	        </div>
-	    </div>
+	   
 	</nav>
 	
 	<div class="container">
