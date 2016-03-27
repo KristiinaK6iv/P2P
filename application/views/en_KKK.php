@@ -35,4 +35,4 @@ include('en_ylaosa.php')
 	</div>
 <?php
 include('alaosa.php')
-?>en-
+?>
