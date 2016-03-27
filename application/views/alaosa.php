@@ -1,7 +1,8 @@
 
 <div class="container text-center">
     <hr>
-    <p>&copy; Copyright 2016</p>
+    <a class="footer" href="<?php echo base_url(); ?>index.php/welcome/sisukaart">Sisukaart</a>
+    <p class="footer" id>&copy; Copyright 2016</p>
 </div>
 </body>
 </html>

@@ -49,6 +49,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('KKK');
 		
 	}
+
+	public function sisukaart()
+	{
+
+		$this->load->view('sitemap');
+
+	}
 	
 	
 	public function minuKuulutusedLoggedOut()
