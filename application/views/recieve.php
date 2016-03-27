@@ -62,7 +62,7 @@ if (openssl_verify ($data, base64_decode($fields["VK_MAC"]), $public_key) !== 1)
 // ==============================================
 ?>
 
-    <h2>Maksetulemused: </h2>
+    <h3>Maksetulemused: </h3>
     
     		<!--Message - if failed or not-->
 			<div class="alert alert-success text-center">

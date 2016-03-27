@@ -23,7 +23,7 @@ include('ylaosa.php')
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label for="location">Asukoht: </label>
-								 <a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun vali maakond."><img class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
+								 <a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun vali maakond."><img class="img" alt="#" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
 								 <select name="location" id="location">
 									<option value="Harjumaa">Harjumaa</option>
 									<option value="Hiiumaa">Hiiumaa</option>
@@ -44,7 +44,7 @@ include('ylaosa.php')
 							</div>
 							<div class="col-sm-4 form-group">
 								<label for="category">Kategooria: </label>
-								 <a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun vali kategooria"><img class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
+								 <a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun vali kategooria"><img alt="#" class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
 								<select name="category" id="category">
 									<option value="IT-teenused">IT-teenused</option>
 									<option value="Finantsteenused">Finantsteenused</option>
@@ -58,7 +58,7 @@ include('ylaosa.php')
 								<?php 
 									//Phone field
 									echo form_label("Telefon :","phone_nr");
-									echo " <a href = \"#\" data-toggle = \"tooltip\" data-placement = \"right\" title = \"Palun sisesta siia enda kontaktnumber.\"><img class=\"img\" src=\"". base_url() ."images/questionmark.png\"/></a> ";
+									echo " <a href = \"#\" data-toggle = \"tooltip\" data-placement = \"right\" title = \"Palun sisesta siia enda kontaktnumber.\"><img alt=\"#\" class=\"img\" src=\"". base_url() ."images/questionmark.png\"/></a> ";
 									$data=array(
 										"name"=>"phone_nr",
 										"id"=>"phone_nr",
@@ -71,19 +71,19 @@ include('ylaosa.php')
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label for="begin">Algus: </label>
-								<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun sisesta siia kuulutuse alguskuupäev"><img class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
+								<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun sisesta siia kuulutuse alguskuupäev"><img class="img" alt="#" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
 								<input type="date" name="begin" id="begin" value="<?php date("Y-m-d")?>">
 								
 							</div>
 							<div class="col-sm-4 form-group">
 								<label for="end">Lõpp: </label>
-								<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun sisesta siia kuulutuse kehtivuse kaotamise kuupäev"><img class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
+								<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Palun sisesta siia kuulutuse kehtivuse kaotamise kuupäev"><img class="img" alt="#" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
 								<input type="date" name="end" id="end" value="<?php date("Y-m-d")?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="description">Kirjeldus: </label>
-							<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Siia lisa täpsustavaid andmeid."><img class="img" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
+							<a href = "#" data-toggle = "tooltip" data-placement = "right" title = "Siia lisa täpsustavaid andmeid."><img class="img" alt="#" src="<?php echo base_url(); ?>images/questionmark.png"/></a>
 							<textarea name="description" id="description" placeholder="Sisesta siia kirjeldus..." rows="5" 
 							class="form-control"></textarea>
 						</div>

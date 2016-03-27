@@ -104,12 +104,12 @@ $fields["VK_MAC"] = base64_encode($signature);
 	<div class="col-lg-12 well">	
 		    <div class="row">
 				<div class="col-sm-4 form-group">
-			        Maksja nimi:
-			        <input type="text" name="PANGALINK_NAME" required/>
+			        <label for="PANGALINK_NAME">Maksja nimi: </label>
+			        <input type="text" name="PANGALINK_NAME" id="PANGALINK_NAME" required/>
 		    	</div>
 				<div class="col-sm-4 form-group">
-			        Maksja konto:
-			        <input type="text" name="PANGALINK_ACCOUNT" required/>
+			        <label for="PANGALINK_ACCOUNT">Maksja konto: </label>
+			        <input type="text" id="PANGALINK_ACCOUNT" name="PANGALINK_ACCOUNT" required/>
 		    	</div>
 				<div class="col-sm-4 form-group">
 		        	<input type="submit" value="MAKSMA" />
