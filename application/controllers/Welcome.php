@@ -109,6 +109,33 @@ class Welcome extends CI_Controller {
 		$this->load->view('notrecieved');
 		
 	}
+	public function enAvaleht(){
+		$this->load->view('en_avaleht');
+	}
+	public function enKoikKuulutused()
+	{
+		$this->load->view('en_koikKuulutused');
+	}
+	public function enKontakt()
+	{
+		$this->load->view('en_kontakt');
+	}
+	public function enReklaam()
+	{
+		$this->load->view('en_reklaam');
+	}
+	public function enKKK()
+	{
+		$this->load->view('en_KKK');
+	}
+	public function enMinuKuulutused()
+	{
+		$this->load->view('en_minuKuulutused');
+	}
+	public function enMinuKuulutusedLoggedout()
+	{
+		$this->load->view('en_minuKuulutusedLoggedout');	
+	}
 	
 	
 }
