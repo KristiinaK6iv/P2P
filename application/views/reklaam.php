@@ -1,5 +1,11 @@
 <?php
-include('ylaosa.php')
+$Get_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+if ($Get_url == 'http://p2pkuulutused.cs.ut.ee/index.php/welcome/enReklaam'){
+include('en_ylaosa.php');
+
+}else if($Get_url == 'http://p2pkuulutused.cs.ut.ee/index.php/welcome/reklaam'){
+include('ylaosa.php');}
 ?>
 <div class="container">
 		
