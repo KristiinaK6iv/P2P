@@ -90,7 +90,7 @@ $fields["VK_MAC"] = base64_encode($signature);
 ?>
    
 
-<!--Lisada siia enda panga "Pöörduspunkti URL" serveri aadress, kui teete uue local pangaserveri!!!-->
+<!--Lisada siia enda panga "Pöörduspunkti URL" serveri aadress, kui teete uue local pangaserveri-->
 
 <form method="POST" action="http://localhost:8080/banklink/ipizza">
 	<?php
@@ -102,27 +102,19 @@ $fields["VK_MAC"] = base64_encode($signature);
 	<h3 class="alert alert-info">Veebilehele on võimalik lisada reklaame. Maksumus on 150 Eurot. Maksmine toimub siin:  </h3>
 
 	<div class="col-lg-12 well">	
-		<table class="table">
 		    <div class="row">
 				<div class="col-sm-4 form-group">
-			        <td>Maksja nimi:</td>
-			        <td><input type="text" name="PANGALINK_NAME" required/></td>
+			        Maksja nimi:
+			        <input type="text" name="PANGALINK_NAME" required/>
 		    	</div>
-		    </div>
-		
-		    <div class="row">
 				<div class="col-sm-4 form-group">
-			        <td>Maksja konto:</td>
-			        <td><input type="text" name="PANGALINK_ACCOUNT" required/></td>
+			        Maksja konto:
+			        <input type="text" name="PANGALINK_ACCOUNT" required/>
 		    	</div>
-		    </div>
-		
-		    <div class="row">
 				<div class="col-sm-4 form-group">
-		        	<td><input type="submit" value="MAKSMA" /></td>
+		        	<input type="submit" value="MAKSMA" />
 		    	</div>
 		    </div>
-		</table>
 	</div>
 </form>	
 		

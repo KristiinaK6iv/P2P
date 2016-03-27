@@ -8,9 +8,6 @@ include('ylaosa.php')
 // STEP 1. Setup bank certificate
 // ==============================
 
-
-// Tuleb juurde lisada!
-
 $public_key = openssl_pkey_get_public("");
 
 // STEP 2. Define payment information
