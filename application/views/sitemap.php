@@ -7,14 +7,14 @@ include('ylaosa.php')
             <div class="col-md-3 col-md-offset-5">
                 <ul class = "sitemap">
                     <li><span class="glyphicon glyphicon-chevron-right"></span><a href="<?php echo base_url(); ?>index.php/categories/">Avaleht</a></li>
-                    <ul>
+                    <li><ul>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/IT-teenused">IT-teenused</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/Iluteenused">Iluteenused</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/Finantsteenused">Finantsteenused</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/Puhastusteenused">Puhastusteenused</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/Opetamine">Õpetamine</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/categories/categoryPage/Varia">Varia</a></li>
-                    </ul>
+                    </ul></li>
                     <li><span class="glyphicon glyphicon-chevron-right"></span><a href="<?php echo base_url(); ?>index.php/categories/all">Kõik kuulutused</a></li>
                     <li id="minu"><span class="glyphicon glyphicon-chevron-right"></span>
                         <?php if (isset($_SESSION['name'])){
