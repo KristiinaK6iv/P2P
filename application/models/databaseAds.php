@@ -5,12 +5,15 @@ class Databaseads extends CI_Model{
 
 	//To show all the ad's that are in db.
 	public function getData(){
-
-
-		
 	 	$query = $this->db->get('v_all_data');
-        
 		return $query->result();
+	}
+
+	//To see how many ads are there in total
+	public function getCountAll(){
+		$query = $this->db->get('v_countall');
+		$ret = $query->row();
+		return $ret->count;
 	}
 
 

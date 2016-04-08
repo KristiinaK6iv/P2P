@@ -21,6 +21,7 @@ $this->load->helper('url');
     <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
     <script src="<?php echo base_url(); ?>js/address_listener.js"></script>
     <script src="<?php echo base_url(); ?>js/translation.js"></script>
+	<script src="<?php echo base_url(); ?>js/long_poller.js"></script> <!--skript alaosa uuendamiseks lehel-->
     <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
     <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
     
@@ -62,9 +63,6 @@ $this->load->helper('url');
 					<li><div class='btn-group'> <!-- Change language -->
                   <a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
 			<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></li>
-</div>
-					
-					
 	            </ul>
 	        </div>
 	    </div>
