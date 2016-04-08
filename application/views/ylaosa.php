@@ -3,7 +3,6 @@ session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->helper('url');
 
-
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ $this->load->helper('url');
 
 <head>
     <meta charset="utf-8"/>
-    <title>P2P kuulutused</title>
+    <title><?php echo $title?></title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>

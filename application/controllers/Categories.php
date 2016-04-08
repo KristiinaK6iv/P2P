@@ -8,12 +8,14 @@ class Categories extends CI_Controller {
 
     public function index()
     {
-
+		$title['title'] = 'P2P - Avaleht';
+		$this->load->view('ylaosa',$title);
         $this->load->view('avaleht');
     }
     public function en()
     {
-
+		$title['title'] = 'P2P - Main page';
+		$this->load->view('en_ylaosa',$title);
         $this->load->view('en_avaleht');
     }
 
@@ -59,6 +61,8 @@ class Categories extends CI_Controller {
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
 		$data['records6']=$this->Databaseads->getCityStatistic();
+		$title['title'] = 'P2P - Kõik kuulutused';
+		$this->load->view('ylaosa',$title);
         $this->load->view('koikKuulutused', $data);
 
     }
@@ -68,6 +72,8 @@ class Categories extends CI_Controller {
         $data['records'] = $this->Databaseads->getData();
         $data['records2'] = $this->Databaseads->getSum();
 		$data['records6']=$this->Databaseads->getCityStatistic();
+		$title['title'] = 'P2P - Ads';
+		$this->load->view('en_ylaosa',$title);
         $this->load->view('en_koikKuulutused', $data);
 	
     }

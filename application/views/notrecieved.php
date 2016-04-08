@@ -1,6 +1,4 @@
-<?php
-include('ylaosa.php')
-?>
+
 	<div class="container text-center">
 		<div class="alert alert-warning">
   			<strong>Warning!</strong> 

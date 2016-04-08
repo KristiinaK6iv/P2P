@@ -1,6 +1,4 @@
-<?php
-include('en_ylaosa.php')
-?>
+
 	<div class="container">
 		<section>
 			<div class="page-header">

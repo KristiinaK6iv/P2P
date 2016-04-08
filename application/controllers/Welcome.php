@@ -38,14 +38,17 @@ class Welcome extends CI_Controller {
 	}
 	public function minuKuulutused()
 	{
-		
+		$title['title'] = 'P2P - minu kuulutused';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('minuKuulutused');
 		
 	}
 	
 	public function KKK()
 	{
-			
+		
+		$title['title'] = 'P2P - KKK';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('KKK');
 		
 	}
@@ -60,14 +63,16 @@ class Welcome extends CI_Controller {
 	
 	public function minuKuulutusedLoggedOut()
 	{
-			
+		$title['title'] = 'P2P - Minu kuulutused';
+		$this->load->view('ylaosa',$title);	
 		$this->load->view('minuKuulutusedLoggedOut');
 		
 	}
 	
 	public function kontakt()
 	{
-		
+		$title['title'] = 'P2P - Kontakt';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('kontakt');
 		
 	}
@@ -93,47 +98,62 @@ class Welcome extends CI_Controller {
 	}
 	public function reklaam()
 	{
-		
+		$title['title'] = 'P2P - Reklaam';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('reklaam');
 		
 	}
 	public function recieve()
 	{
-		
+		$title['title'] = 'P2P - Reklaam';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('recieve');
 		
 	}
 	public function notrecieved()
 	{
-		
+		$title['title'] = 'P2P - Reklaam';
+		$this->load->view('ylaosa',$title);
 		$this->load->view('notrecieved');
 		
 	}
 	public function enAvaleht(){
+		
 		$this->load->view('en_avaleht');
 	}
 	public function enKoikKuulutused()
 	{
+		
 		$this->load->view('en_koikKuulutused');
 	}
 	public function enKontakt()
 	{
+		$title['title'] = 'P2P - Contact';
+		$this->load->view('en_ylaosa',$title);
 		$this->load->view('en_kontakt');
 	}
 	public function enReklaam()
 	{
+		$title['title'] = 'P2P - Commercial';
+		$this->load->view('en_ylaosa',$title);
 		$this->load->view('en_reklaam');
 	}
 	public function enKKK()
 	{
+		$title['title'] = 'P2P - Q&A';
+		$this->load->view('en_ylaosa',$title);
 		$this->load->view('en_KKK');
 	}
 	public function enMinuKuulutused()
 	{
+		$title['title'] = 'P2P - My ads';
+		$this->load->view('en_ylaosa',$title);
 		$this->load->view('en_minuKuulutused');
 	}
 	public function enMinuKuulutusedLoggedout()
 	{
+		$title['title'] = 'P2P - My ads';
+		$this->load->view('en_ylaosa',$title);
 		$this->load->view('en_minuKuulutusedLoggedout');	
 	}
 	public function enAlaosa()

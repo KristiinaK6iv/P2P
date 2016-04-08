@@ -1,6 +1,4 @@
-<?php
-include('ylaosa.php')
-?>
+
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-md-4 col-md-offset-1"><img src="<?php echo base_url(); ?>images/logo.png" class="img-responsive" alt="logo"></div>
