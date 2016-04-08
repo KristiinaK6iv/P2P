@@ -109,6 +109,11 @@ h2{
     font-size: 13px;
     color: #333;
 }
+p.footer{
+    margin-bottom: 0px;
+}
+
+
 a.footer:hover{
     color: #333;
 }
