@@ -10,7 +10,13 @@ $this->load->helper('url');
 
 <head>
     <meta charset="utf-8"/>
-    <title><?php echo $title?></title>
+    <?php 
+    if(isset($title)){
+    echo "<title>".$title."</title>";
+    } else {
+    	echo "<title>Minu kuulutused</title>";
+	}
+    ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -22,7 +28,7 @@ $this->load->helper('url');
 	<script src="<?php echo base_url(); ?>js/long_poller.js"></script> <!--skript alaosa uuendamiseks lehel-->
     <script src="<?php echo base_url(); ?>js/translation.js"></script>
     <script src="<?php echo base_url(); ?>js/fb2.js"></script>
-     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
 </head>
 

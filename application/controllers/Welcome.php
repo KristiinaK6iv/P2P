@@ -38,8 +38,7 @@ class Welcome extends CI_Controller {
 	}
 	public function minuKuulutused()
 	{
-		$title['title'] = 'P2P - minu kuulutused';
-		$this->load->view('ylaosa',$title);
+		
 		$this->load->view('minuKuulutused');
 		
 	}
@@ -146,8 +145,7 @@ class Welcome extends CI_Controller {
 	}
 	public function enMinuKuulutused()
 	{
-		$title['title'] = 'P2P - My ads';
-		$this->load->view('en_ylaosa',$title);
+		
 		$this->load->view('en_minuKuulutused');
 	}
 	public function enMinuKuulutusedLoggedout()

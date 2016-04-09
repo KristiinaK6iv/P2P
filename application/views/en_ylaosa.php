@@ -11,7 +11,13 @@ $this->load->helper('url');
 
 <head>
     
-    <title><?php echo $title?></title>
+    <?php 
+    if(isset($title)){
+    echo "<title>".$title."</title>";
+    } else {
+    	echo "<title>My ads</title>";
+	}
+    ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
