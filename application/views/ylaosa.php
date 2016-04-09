@@ -6,7 +6,7 @@ $this->load->helper('url');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="/off.appcache">
 
 <head>
     <meta charset="utf-8"/>
@@ -14,7 +14,7 @@ $this->load->helper('url');
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.8.0.min.js">\x3C/script>')</script>
+    <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>js/jquery-1.8.0.min.js">\x3C/script>')</script>
     <script src="<?php echo base_url(); ?>js/jquery.address-1.5.js"></script>
     <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
     <script src="<?php echo base_url(); ?>js/address_listener.js"></script>
