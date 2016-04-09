@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<KONTAKT xmlns:k="http://www.w3schools.com/NS/">
+	<k:TÄNAV>Riia 55</k:TÄNAV>
+	<k:LINN>Tartu</k:LINN>
+	<k:RIIK>Eesti</k:RIIK>
+	<k:POSTIINDEKS>50405</k:POSTIINDEKS>
+	<!--Tavaline-->
+	<POSTIINDEKS>562834 (without namespace)</POSTIINDEKS>
+</KONTAKT>
