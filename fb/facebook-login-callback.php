@@ -40,10 +40,13 @@ if (isset($accessToken)) {
   
 
 // Checking in which page we are
- if (strpos($_SERVER['HTTP_REFERER'], 'minuKuulutusedLoggedOut') !== false) {
+ if (strpos($_SERVER['HTTP_REFERER'], 'enMinuKuulutusedLoggedout') !== false) {
+	 header('Location:http://localhost/P2P/index.php/welcome/enMinuKuulutused');
+  		exit;
+	}elseif(strpos($_SERVER['HTTP_REFERER'], 'minuKuulutusedLoggedOut') !== false) {
 	 header('Location:http://localhost/P2P/index.php/welcome/minuKuulutused');
   		exit;
-	}else{
+		}else{
   	header('Location:'.$_SERVER['HTTP_REFERER']);
   	exit;
 	}

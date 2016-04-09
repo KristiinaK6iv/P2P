@@ -1,6 +1,4 @@
-<?php
-include('ylaosa.php')
-?>
+
     <div class="container">
         <br>
         <h3>Kõik kuulutused: </h3>

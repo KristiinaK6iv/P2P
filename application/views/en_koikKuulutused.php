@@ -1,6 +1,4 @@
-<?php
-include('en_ylaosa.php')
-?>
+
     <div class="container">
         <br>
         <h3>All ads: </h3>

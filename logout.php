@@ -11,7 +11,10 @@ session_destroy();
 if (strpos($_SERVER['HTTP_REFERER'], 'minuKuulutused') !== false) {
 	 header('Location:http://localhost/P2P/index.php/welcome/minuKuulutusedLoggedOut');
   		exit;
-}else{
+}elseif(strpos($_SERVER['HTTP_REFERER'], 'enMinuKuulutused') !== false) {
+	 header('Location:http://localhost/P2P/index.php/welcome/enMinuKuulutusedLoggedout');
+  		exit;
+	}else{
   header('Location:'.$_SERVER['HTTP_REFERER']);
   exit;
 }

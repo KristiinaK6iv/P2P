@@ -1,6 +1,4 @@
-<?php
-include('ylaosa.php')
-?>
+
 	<div class="container">
 		<h3>Korduma kippuvad küsimused</h3>
 		<!-- Stack the columns on mobile by making one full-width and the other half-width -->
