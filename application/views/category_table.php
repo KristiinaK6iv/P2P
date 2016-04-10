@@ -23,14 +23,14 @@
             <tbody>
             <?php foreach($list as $row) : ?>
                 <tr>
-                    <td><?php echo $row->full_name;?></td>
-                    <td><?php echo $row->phone_nr;?></td>
-                    <td><?php echo $row->e_mail;?></td>
-                    <td><?php echo $row->category;?></td>
-                    <td><?php echo $row->description;?></td>
-                    <td><?php echo $row->begin;?></td>
-                    <td><?php echo $row->end;?></td>
-                    <td><?php echo $row->location;?></td>
+                    <td><?php echo htmlspecialchars($row->full_name);?></td>
+                    <td><?php echo htmlspecialchars($row->phone_nr);?></td>
+                    <td><?php echo htmlspecialchars($row->e_mail);?></td>
+                    <td><?php echo htmlspecialchars($row->category);?></td>
+                    <td><?php echo htmlspecialchars($row->description);?></td>
+                    <td><?php echo htmlspecialchars($row->begin);?></td>
+                    <td><?php echo htmlspecialchars($row->end);?></td>
+                    <td><?php echo htmlspecialchars($row->location);?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

@@ -39,13 +39,13 @@ include('en_ylaosa.php')
                     </tr>
                     <?php foreach($records3 as $rec) : ?>
                         <tr>
-                            <td><?php echo $rec->full_name;?></td>
-                            <td><?php echo $rec->phone_nr;?></td>
-                            <td><?php echo $rec->e_mail;?></td>
-                            <td><?php echo $rec->category;?></td>
-                            <td><?php echo $rec->description;?></td>
-                            <td><?php echo $rec->begin;?></td>
-                            <td><?php echo $rec->end;?></td>
+                            <td><?php echo htmlspecialchars($rec->full_name);?></td>
+                            <td><?php echo htmlspecialchars($rec->phone_nr);?></td>
+                            <td><?php echo htmlspecialchars($rec->e_mail);?></td>
+                            <td><?php echo htmlspecialchars($rec->category);?></td>
+                            <td><?php echo htmlspecialchars($rec->description);?></td>
+                            <td><?php echo htmlspecialchars($rec->begin);?></td>
+                            <td><?php echo htmlspecialchars($rec->end);?></td>
                         </tr>
                     <?php endforeach ?>
 
