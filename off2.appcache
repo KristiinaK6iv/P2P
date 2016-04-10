@@ -1,0 +1,22 @@
+CACHE MANIFEST
+CACHE:
+
+/css/bootstrap.min.css
+/css/navbar-theme2.css
+/js/jquery.address-1.5.js
+/js/ajax_script.js
+/js/address_listener.js
+/js/translation.js
+js/long_poller.js
+js/load_more.js
+/js/jquery-1.8.0.min.js
+/js/fb2.js
+/js/map.js
+/images/facebook-icon.png
+/images/id-icon.png
+/images/questionmark.png
+FALLBACK:
+/index.php/welcome/KKK
+
+NETWORK:
+*
