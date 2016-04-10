@@ -6,7 +6,7 @@ $this->load->helper('url');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" manifest="/off.appcache">
+<html lang="en" >
 
 <head>
     <meta charset="utf-8"/>
