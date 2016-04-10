@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 	{
 		
 		$title['title'] = 'P2P - KKK';
-		$this->load->view('ylaosa',$title);
+		$this->load->view('ylaosa2',$title);
 		$this->load->view('KKK');
 		
 	}
