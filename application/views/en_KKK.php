@@ -1,4 +1,4 @@
-
+ 
 	<div class="container">
 		<h3>Q&A</h3>
 		<!-- Stack the columns on mobile by making one full-width and the other half-width -->
