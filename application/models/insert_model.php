@@ -17,7 +17,17 @@ class Insert_model extends CI_Model{
 		
 		//Controlling rules
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('minuKuulutused');
+			@session_start();
+			$this->load->model('Databaseads');
+			$data['records8']=$this->Databaseads->get_personal_ads();
+			
+			if (strpos($_SERVER['HTTP_REFERER'], 'enMinuKuulutused') !== false) {
+	 			$this->load->view('en_minuKuulutused',$data);
+			}else{
+  				$this->load->view('minuKuulutused',$data);
+			}
+			
+			
 		}else{
 			$data["message"]="Everything is ok";
 			$this->load->view('minuKuulutused',$data);
@@ -50,9 +60,16 @@ class Insert_model extends CI_Model{
 		$stored_procedure = "CALL add_ad(?,?,?,?,?)";
 		$this->db->query($stored_procedure,array('category'=>$category,'description'=>$description,'begin'=>$begin,'end'=>$end,'location'=>$location));
 		
-		
-		
-		
+		if (strpos($_SERVER['HTTP_REFERER'], 'enMinuKuulutused') !== false) {
+	 	header("Location: http://localhost/P2P/index.php/welcome/enMinuKuulutused"); /* Redirect browser */
+				exit();
+		}else{
+  			header("Location: http://localhost/P2P/index.php/welcome/minuKuulutused"); /* Redirect browser */
+				exit();
+		}
+  
+
+
 	}
 }
 

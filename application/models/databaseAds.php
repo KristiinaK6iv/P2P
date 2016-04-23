@@ -2,10 +2,20 @@
 
 class Databaseads extends CI_Model{
 
-
+	
 	//To show all the ad's that are in db.
 	public function getData(){
 	 	$query = $this->db->get('v_all_data');
+		return $query->result();
+	}
+	
+	//To get ads that logged in person has added
+	public function get_personal_ads(){
+		$stored_procedure = "CALL get_personal_ads(?,?)";
+		$full_name=$_SESSION['name'];
+		$e_mail=$_SESSION['email'];
+		$query=$this->db->query($stored_procedure,array('full_name'=>$full_name,'e_mail'=>$e_mail));
+		
 		return $query->result();
 	}
 

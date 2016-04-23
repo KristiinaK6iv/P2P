@@ -94,6 +94,45 @@ include('en_ylaosa.php')
 		<?php echo form_close();?>
 	</div>
 	
+	<div class="container">
+	<br>
+	<button id="show" type="button" class="btn btn-primary">Show my ads</button>
+	</div>
+	<?php if (isset($_SESSION['name'])): ?>
+		<div id="hided" class="container">
+        <br>
+        <h3>My added ads: </h3>
+        <br>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>E-mail</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Beginning Date</th>
+                    <th>End Date</th>
+                    <th>Location</th>
+                </tr>
+                <?php foreach($records8 as $rec) : ?>
+                    <tr>
+                        <td><?php echo  htmlspecialchars($rec->full_name);?></td>
+                        <td><?php echo  htmlspecialchars($rec->phone_nr);?></td>
+                        <td><?php echo  htmlspecialchars($rec->e_mail);?></td>
+                        <td><?php echo  htmlspecialchars($rec->category);?></td>
+                        <td><?php echo  htmlspecialchars($rec->description);?></td>
+                        <td><?php echo  htmlspecialchars($rec->begin);?></td>
+                        <td><?php echo  htmlspecialchars($rec->end);?></td>
+                        <td><?php echo  htmlspecialchars($rec->location);?></td>
+                    </tr>
+                <?php endforeach ?>
+
+            </table>
+        </div>
+        <br>
+    </div>
+	<?php endif;?>
 <?php
 include('en_alaosa.php')
 ?>

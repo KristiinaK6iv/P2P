@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->helper('url');
 
@@ -23,17 +23,15 @@ $this->load->helper('url');
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.8.0.min.js">\x3C/script>')</script>
     <script src="<?php echo base_url(); ?>js/jquery.address-1.5.js"></script>
-    
     <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
     <script src="<?php echo base_url(); ?>js/address_listener.js"></script>
     <script src="<?php echo base_url(); ?>js/translation.js"></script>
 	<script src="<?php echo base_url(); ?>js/long_poller.js"></script> <!--skript alaosa uuendamiseks lehel-->
     <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
     <script src="<?php echo base_url(); ?>js/fb2.js"></script> <!--skript KKK lehel-->
-    
-    
-     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
+	<script src="<?php echo base_url(); ?>js/ads.js"></script>
 </head>
 
 
@@ -67,10 +65,10 @@ $this->load->helper('url');
 					<li ><div class="social-wrap a"><button id="idkaart">ID card</button></div></li>
 					
 					<li><div class='btn-group'> <!-- Change language -->
-                  <a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
+                  	<a href="<?php echo base_url(); ?>index.php/categories/en/" class='btn btn-circle btn-warning'>ENG</a>
 							<a href="<?php echo base_url(); ?>index.php/categories/" class='btn btn-circle btn-warning'>EST</a></li>
-	            </ul>
-</div>
+	            	</ul>
+						</div>
 	        </div>
 	   
 	</nav>

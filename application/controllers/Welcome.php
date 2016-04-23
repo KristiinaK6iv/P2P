@@ -38,8 +38,10 @@ class Welcome extends CI_Controller {
 	}
 	public function minuKuulutused()
 	{
-		
-		$this->load->view('minuKuulutused');
+		session_start();
+		$this->load->model('Databaseads');
+		$data['records8']=$this->Databaseads->get_personal_ads();
+		$this->load->view('minuKuulutused',$data);
 		
 	}
 	
@@ -145,8 +147,10 @@ class Welcome extends CI_Controller {
 	}
 	public function enMinuKuulutused()
 	{
-		
-		$this->load->view('en_minuKuulutused');
+		session_start();
+		$this->load->model('Databaseads');
+		$data['records8']=$this->Databaseads->get_personal_ads();
+		$this->load->view('en_minuKuulutused',$data);
 	}
 	public function enMinuKuulutusedLoggedout()
 	{

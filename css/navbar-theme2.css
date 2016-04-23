@@ -158,7 +158,9 @@ h3#sisu{
     padding: 10px;
 	height:600px;
 }
-
+#hided{
+	display: none;
+}
 
 
 

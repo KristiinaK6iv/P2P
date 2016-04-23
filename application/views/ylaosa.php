@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->helper('url');
 
@@ -30,6 +30,7 @@ $this->load->helper('url');
     <script src="<?php echo base_url(); ?>js/fb2.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
+	<script src="<?php echo base_url(); ?>js/ads.js"></script>
 </head>
 
 
