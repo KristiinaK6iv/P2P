@@ -21,18 +21,14 @@ $this->load->helper('url');
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/navbar-theme2.css"  type="text/css" />
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>js/jquery-1.8.0.min.js">\x3C/script>')</script>
-    <script src="<?php echo base_url(); ?>js/jquery.address-1.5.js"></script>
-    <script src="<?php echo base_url(); ?>js/ajax_script.js"></script> <!--skript Kuulutused2 lehel ajaxiga uuendamiseks-->
-    <script src="<?php echo base_url(); ?>js/address_listener.js"></script>
-    <script src="<?php echo base_url(); ?>js/load_more.js"></script> <!--skript KKK lehel-->
-	<script src="<?php echo base_url(); ?>js/long_poller.js"></script> <!--skript alaosa uuendamiseks lehel-->
-    <script src="<?php echo base_url(); ?>js/translation.js"></script>
-    <script src="<?php echo base_url(); ?>js/fb2.js"></script>
-    
-     <script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
+    <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>js/jquery-1.8.0.min.js">\x3C/script>')</script>
+    <script async src="<?php echo base_url(); ?>js/jquery.address-1.5.js"></script>
+   
+    <script async src="<?php echo base_url(); ?>js/v2ikesed.js"></script>
+    <script async src="<?php echo base_url(); ?>js/fb2.js"></script>
+    <script async src="http://maps.googleapis.com/maps/api/js"></script>
+    <script async src="<?php echo base_url(); ?>js/map.js"></script> <!--Google maps-->
 </head>
 
 
