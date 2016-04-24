@@ -1,4 +1,4 @@
-AddType text/cache-manifest .manifest
+
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
