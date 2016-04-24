@@ -7,7 +7,7 @@ $this->load->helper('url');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="no-js" manifest="/off2.appcache">
+<html lang="en">
 
 <head>
     
